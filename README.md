@@ -37,10 +37,22 @@ This application uses Spring Boot’s Actuator and logging capabilities to monit
 
 ### 1. Test Health Endpoint
 
-The health endpoint allows you to check the overall health of the application. To test it:
+- **Description**: The health endpoint checks the overall health of the application.
+- **Steps**:
+  1. Start your application.
+  2. Open a browser or a tool like Postman.
+  3. Make a `GET` request to the following URL:
+     ```
+     http://localhost:8080/actuator/health
+     ```
+  4. The expected response is:
+     ```json
+     {
+       "status": "UP"
+     }
+     ```
 
-- **URL**: `http://localhost:8080/actuator/health`
-- Open a browser or use a tool like **Postman** to make a `GET` request to the above URL.
+---
 ### 2. Test Metrics Endpoint
 
 - **Description**: The metrics endpoint provides detailed metrics about the application, such as memory usage, CPU usage, garbage collection, and more.
