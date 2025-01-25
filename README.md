@@ -32,19 +32,3 @@ http://localhost:8080/romannumeral?query=3
 
 ---
 
-# Additional Instructions for Good Documentation:
-
-## 1. Specifications for Roman Numerals
-- Reference the [Wikipedia page for Roman Numerals](https://en.wikipedia.org/wiki/Roman_numerals) for a clear definition of how Roman numerals work and their rules.
-
-## 2. Provide Detailed Documentation
-- **README.md**: 
-- **How to build and run your project**: Clearly explain the setup process.
-- **Your engineering and testing methodology**: Provide insights on how the application is structured and tested.
-- **Your packaging layout**: Describe the folder and file structure of your project.
-- **Dependency attribution**: List any third-party libraries or tools used.
-- **Inline documentation** in your source code:
-- Add comments within your code to clarify logic and key sections.
-
-## 3. Error Handling
-- Ensure proper error handling is implemented in your application. Handle common error scenarios (e.g., invalid input, service failures) and provide clear, informative responses to the user.
