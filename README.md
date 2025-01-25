@@ -1,16 +1,16 @@
-Backend - Spring Boot
-Clone the project from GitHub
+# Backend - Spring Boot
 
-Unzip the project from GitHub to your local machine.
-Open the project in Eclipse or Spring Tool Suite (STS).
-Run the Spring Boot application
+## Step 1: Clone the project from GitHub
+- Unzip the project from GitHub to your local machine.
+- Open the project in Eclipse or Spring Tool Suite (STS).
 
-Right-click on the project.
-Select Run As → Spring Boot App to start the application.
-Verify the server is running
+## Step 2: Run the Spring Boot application
+- Right-click on the project.
+- Select **Run As → Spring Boot App** to start the application.
 
-The application will now be running on port 8080.
-You should see the Spring Boot banner in your console indicating the app is up and running.
-Test the API
+## Step 3: Verify the server is running
+- The application will now be running on port **8080**.
+- You should see the Spring Boot banner in your console indicating the app is up and running.
 
-Open your browser or Postman and navigate to
+## Step 4: Test the API
+- Open your browser or Postman and navigate to: 
