@@ -41,7 +41,76 @@ The health endpoint allows you to check the overall health of the application. T
 
 - **URL**: `http://localhost:8080/actuator/health`
 - Open a browser or use a tool like **Postman** to make a `GET` request to the above URL.
+### 2. Test Metrics Endpoint
 
+- **Description**: The metrics endpoint provides detailed metrics about the application, such as memory usage, CPU usage, garbage collection, and more.
+- **Steps**:
+  1. Start your application.
+  2. Open a browser or a tool like Postman.
+  3. Make a `GET` request to the following URL:
+     ```
+     http://localhost:8080/actuator/metrics
+     ```
+  4. The expected response includes a list of metric names, like:
+     ```json
+     {
+       "names": [
+         "jvm.memory.used",
+         "system.cpu.usage",
+         "http.server.requests",
+         "jvm.gc.pause",
+         "jvm.memory.max",
+         "jvm.memory.committed"
+       ]
+     }
+     ```
+
+---
+
+### 3. Test Logs Locally
+
+#### a. Console Logs
+- **Description**: Logs will appear in the console during application runtime.
+- **Steps**:
+  1. Start your application.
+  2. Trigger application events (e.g., make a request to `/romannumeral?query=5`).
+  3. View the logs in the console. Example:
+     ```
+     2025-01-24 10:23:45 - INFO - Incoming request to convert number 5 to Roman numeral
+     2025-01-24 10:23:45 - DEBUG - Conversion successful, Roman numeral: V
+     ```
+
+#### b. Log Files
+- **Description**: Logs are saved to a file for persistent storage.
+- **Steps**:
+  1. Check the `logs/application.log` file in your project directory.
+  2. Open the file to inspect logs. Example:
+     ```
+     2025-01-24 10:23:45 - INFO - Incoming request to convert number 5 to Roman numeral
+     2025-01-24 10:23:45 - DEBUG - Conversion successful, Roman numeral: V
+     ```
+
+---
+
+### 4. Logging Levels
+
+- **Description**: Different logging levels capture varying degrees of detail. You can configure the levels in your `application.properties` or `application.yml` file.
+- **Logging Levels**:
+  - **INFO**: For general application flow.
+    - Example: `Application started successfully.`
+  - **DEBUG**: For more granular debugging details.
+    - Example: `Incoming request to /romannumeral with query=5.`
+  - **ERROR**: For logging critical issues or exceptions.
+    - Example: `Failed to convert query to Roman numeral.`
+- **Usage**:
+  - Modify logging levels in `application.properties`:
+    ```
+    logging.level.org.springframework=DEBUG
+    logging.level.com.example=INFO
+    ```
+  - Restart the application to apply changes.
+
+---
 
 # Frontend - React Setup
 
