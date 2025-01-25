@@ -32,3 +32,42 @@ http://localhost:8080/romannumeral?query=3
 
 ---
 
+# Frontend - React Setup
+
+## Step 1: Open Terminal in Visual Studio Code
+- Launch **Visual Studio Code**.
+- Open the integrated terminal by navigating to **View → Terminal**.
+
+## Step 2: Create a New React Application
+- Run the following command to create a new React app:
+npx create-react-app roman-numeral-converter
+
+
+## Step 3: Install Dependencies
+- Once the app is created, navigate to the project directory and install the required dependencies:
+
+npm install @adobe/react-spectrum
+
+
+## Step 4: Navigate to the Project Directory
+- Change the directory to the newly created `roman-numeral-converter` project folder:
+
+cd roman-numeral-converter
+
+
+## Step 5: Update `App.js` and `App.css`
+- Modify the `App.js` and `App.css` files located in the **src/** directory to implement your application logic and styling.
+- Additionally, create a **Dockerfile** in the root directory of your project and add the necessary Docker configuration code.
+
+## Step 6: Run the React Application
+- Once the updates are made, start the development server by running:
+
+npm start
+
+
+## Step 7: Verify the React Application
+- The React app will run and automatically open in your default browser.
+- The server will be hosted on **localhost:3000**.
+
+**Note**: Ensure that the React application runs on port **3000** since the backend is also configured to use port 3000.
+
