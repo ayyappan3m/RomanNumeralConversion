@@ -1,3 +1,46 @@
+# Extensions
+
+This project includes the implementation of the following extensions as per the requirements:
+
+---
+
+### **Extension 1**: Expand the Range of Numbers to 1–3999
+
+- The Roman Numeral Converter API has been updated to handle a broader range of input values, from `1` to `3999`.
+- Proper validations are implemented to handle edge cases (e.g., input out of range, invalid input types) with detailed exception handling.
+- **Test Cases**: Unit tests and Integration tests are added to verify the conversion for valid and invalid inputs.
+
+---
+
+### **Extension 2**: Create a Simple React App for the Roman Numeral API
+
+The React frontend is designed to interact seamlessly with the Roman Numeral API and includes the following features:
+- **Input Field**: Allows users to enter a number.
+- **Button**: Triggers the API call to convert the input number to Roman numerals.
+- **Display Field**: Shows the converted Roman numeral output.
+- **Light and Dark Modes**: Provides a toggle to switch between light and dark themes for better user experience.
+
+**Technology Used**:
+- The application uses a UI component library for faster development:
+  - **Library Justification**: [Your chosen library justification: e.g., used before, quick to bootstrap, recommended, etc.]
+- The application ensures cross-origin communication between the React frontend (running on `localhost:3000`) and the Spring Boot backend (running on `localhost:8080`) by enabling **CORS**.
+
+**Testing**:
+- Thorough integration testing ensures the React frontend works correctly with the backend API.
+- Mock test cases are included to verify individual frontend and backend behaviors.
+
+---
+
+### **Extension 3**: DevOps Capabilities for Production Readiness
+
+The project includes additional DevOps features to facilitate production deployment, monitoring, and logging.
+
+#### **1. Docker Integration**
+- The application is containerized with Docker for easy deployment.
+- **Backend Dockerfile**: Builds a Spring Boot application as a runnable container.
+- **Frontend Dockerfile**: Builds the React application and serves it using Nginx.
+
+
 # Backend - Spring Boot
 
 ## Step 1: Clone the project from GitHub
