@@ -31,6 +31,23 @@ http://localhost:8080/romannumeral?query=3
 - Select **Run As → JUnit Test** to execute the test cases in this file.
 
 ---
+# Application Monitoring and Logging
+
+This application uses Spring Boot’s Actuator and logging capabilities to monitor its health, gather metrics, and log events. Below are the steps to test the health, metrics, and logging functionalities in your application.
+
+### 1. Test Health Endpoint
+
+The health endpoint allows you to check the overall health of the application. To test it:
+
+- **URL**: `http://localhost:8080/actuator/health`
+- Open a browser or use a tool like **Postman** to make a `GET` request to the above URL.
+
+**Expected Response**:
+```json
+{
+  "status": "UP"
+}
+
 
 # Frontend - React Setup
 
