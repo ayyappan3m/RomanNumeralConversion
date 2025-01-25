@@ -71,3 +71,89 @@ npm start
 
 **Note**: Ensure that the React application runs on port **3000** since the backend is also configured to use port 3000.
 
+
+# Docker Setup
+
+## Docker Setup in Backend - Spring Boot
+
+### Step 1: Create Dockerfile
+- In the root directory of the **RomanNumeralApp** project, create a file named **Dockerfile**.
+
+### Step 2: Build the Project with Maven
+- Right-click on the project folder and select **Run As → Maven Build**.
+- In the **Goals** field, enter:
+
+clean install
+
+- Click **Run** to build the project.
+
+### Step 3: Verify Docker JAR File
+- Once the build is complete, you will find the **docker jar file** in the **target/** directory.
+
+### Step 4: Install Docker Desktop
+- Make sure **Docker Desktop** is installed on your computer. If it's not installed, download and install it from the official Docker website.
+
+### Step 5: Open Terminal and Navigate to Project Directory
+- Open your terminal and navigate to the **RomanNumeralApp** project directory.
+
+### Step 6: Build the Docker Image
+- Run the following command to build the Docker image:
+
+docker build -t roman-numeral-app .
+
+
+### Step 7: Verify the Docker Image Build
+- To confirm that the image was built successfully, run the following command:
+
+docker run -p 8080:8080 roman-numeral-app
+
+
+### Step 9: Access Your Application
+- Once the container is running, you can access the application by opening your browser or using Postman or cURL to make a request to:
+
+http://localhost:8080/romannumeral?query=3
+
+
+### Step 10: Stop the Running Docker Container
+- To stop the running container, first find the container ID by running:
+
+docker ps
+
+- Once you have the container ID, stop the container with:
+docker stop <container_id>
+
+
+- Optionally, after stopping the container, you can remove it using:
+
+docker rm <container_id>
+
+
+---
+
+## Docker Setup in Frontend - React
+
+### Step 1: Create Dockerfile for React App
+- In the **Roman-Numeral-converter** project directory, create a file named **Dockerfile** and paste the necessary Docker configuration code.
+
+### Step 2: Navigate to the React Project Directory
+- Open a terminal and navigate to the **Roman-Numeral-converter** project directory.
+
+### Step 3: Build the Docker Image
+- Build the Docker image for the React app by running the following command:
+
+docker build -t roman-numeral-frontend .
+
+
+### Step 4: Run the Docker Container for React App
+- After the Docker image has been built, run the container and map the ports using the following command:
+
+docker run -p 3000:80 roman-numeral-frontend
+
+
+### Step 5: Test the Frontend Application
+- Once the container is running, you can access the frontend application in your browser at:
+
+http://localhost:3000
+
+
+
