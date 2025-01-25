@@ -42,12 +42,6 @@ The health endpoint allows you to check the overall health of the application. T
 - **URL**: `http://localhost:8080/actuator/health`
 - Open a browser or use a tool like **Postman** to make a `GET` request to the above URL.
 
-**Expected Response**:
-```json
-{
-  "status": "UP"
-}
-
 
 # Frontend - React Setup
 
